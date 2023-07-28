@@ -1,0 +1,33 @@
+nav {
+    background-color: #333;
+    font-size: 20px;
+  }
+  
+  .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .menu li {
+    margin-right: 0px;
+  }
+  
+  .menu li:last-child {
+    margin-right: 0;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 20px 67px;
+    display: block;
+    
+  }
+  
+  .menu li a:hover {
+    background-color: #555;
+  }
+
+  

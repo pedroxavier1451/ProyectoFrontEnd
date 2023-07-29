@@ -1,24 +1,38 @@
-<h1>Clientes</h1>
+<h1>Gestion Clientes</h1>
+
+<span *ngIf="listadoContactosWS.length==0">
+    No existen Clientes Registrados
+</span>
+
+<script>
+    var contador=0;
+    setInterval(function(){
+        contador++;
+        document.getElementById("contador").innerHTML=contador;
+    },1000);
+</script>
 
 <div id="elemento">
 <ul>
     <table>
-        <tr>
-        <th>Cedula</th>
-        <th>Nombre</th>
-        <th>Apellido</th>
-        <th>Correo Electronico</th>
-        <th>Generar Ticket</th>
-        </tr>
-        <tbody>
+        <thead class="tituloTabla" *ngIf="listadoContactosWS.length !=0">
             <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td><a id = "generar" (click)="generar()">Generar</a></td>
-            </tr>
-        </tbody>
+                <td>Cedula</td>
+                <td>Nombre</td>
+                <td>Apellido</td>
+                <td>Correo Electronico</td>
+                <td>GenerarTicket</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cliente of listadoContactosWS|async">
+                    <td class ="cedula">{{cliente.cedula}}</td>
+                    <td>{{cliente.nombre}}</td>
+                    <td>{{cliente.apellido}}</td>
+                    <td>{{cliente.correo}}</td>
+                    <td><a id = "generar" (click)="generar()">Generar</a></td>
+                </tr>
+            </tbody>
     </table>
 </ul>
 </div>

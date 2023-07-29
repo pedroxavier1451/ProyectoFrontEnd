@@ -15,7 +15,7 @@ export class ClienteService {
   }
 
   getAll(){
-    return this.http.get<any>("http://localhost:8080/demo/rs/clientes/all")
+    return this.http.get<any>("http://localhost:8080/proyecto/rs/Vehiculo-Cliente/clienteLista")
   }
   
   delete(cliente: Cliente){

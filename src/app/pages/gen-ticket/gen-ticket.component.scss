@@ -1,0 +1,115 @@
+.ticket {
+    max-width: 815px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .form-group {
+    margin-bottom: 20px;
+    
+  }
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input{
+    width: 85%;
+    padding: 5px;
+    font-size: 16px;
+    align-items: center;
+  }
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  #parking-graph {
+    width: 100%;
+    
+  }
+
+  h2{
+    text-align: center;
+    
+  }
+  
+  h3{
+    text-align: center;
+    display: block;
+    font-weight: bold;
+  }
+
+  .parking-grid {
+    display: grid;
+    grid-template-columns: repeat( ); /* 4 columnas de 50px cada una */
+    grid-gap: px; /* Espacio entre los lugares de estacionamiento */
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .spot {
+    width: 161px;
+    height: 65px;
+    background-color: #4CAF50; /* Color de fondo del lugar de estacionamiento */
+    border: 1px solid #999; /* Borde del lugar de estacionamiento */
+    cursor: pointer; /* Cambiar el cursor al pasar por encima de un lugar de estacionamiento */
+    text-align: center;
+    place-items: center;
+    display: grid;
+    font-size: 30px;
+    color:#dad5d5
+  }
+
+  .spot:hover {
+    background-color: #ea0c0c; /* Color de fondo al pasar por encima de un lugar de estacionamiento */
+  }
+
+  
+  .spot.selected{
+    background-color: #ea0c0c;
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  #lbl{
+    text-align: left;
+    margin-left: 10px;
+  }
+
+  button {
+    margin-top: 20px;
+    padding: 10px 150px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    align-items: center;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

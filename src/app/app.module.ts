@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { ListTicketComponent } from './pages/list-ticket/list-ticket.component';
 import { ListFacturaComponent } from './pages/list-factura/list-factura.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
+import { GenTicketComponent } from './pages/gen-ticket/gen-ticket.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
     ListClienteComponent,
     ListTicketComponent,
     ListFacturaComponent,
-    ContactoComponent
+    ContactoComponent,
+    GenTicketComponent
   ],
   imports: [
     BrowserModule,

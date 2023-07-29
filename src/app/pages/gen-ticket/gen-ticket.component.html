@@ -1,0 +1,61 @@
+<div class="ticket">
+    <h2>Generar Ticket</h2>
+    <form>
+      <div class="form-group">
+        <label for="fecha_entrada" id="lbl">Fecha de Entrada:</label>
+        <input type="datetime-local" id="fecha_entrada" required>
+      </div>
+      <div class="form-group">
+        <label for="fecha_salida" id="lbl">Fecha de Salida:</label>
+        <input type="datetime-local" id="fecha_salida" required>
+      </div>
+      <div class="form-group">
+        <label for="placa" id="lbl">Placa:</label>
+        <input type="text" id="placa" required>
+      </div>
+      <div class="form-group">
+        <label for="propietario" id="lbl">Propietario:</label>
+        <input type="text" id="propietario" required>
+      </div>
+      
+      <div class="parking-grid">
+        <h3>Seleccione el lugar:</h3>
+        <div class="row">
+          <div class="spot" id="1" (click)="lugar(1)">1</div>
+          <div class="spot" id="2" (click)="lugar(2)">2</div>
+          <div class="spot" id="3" (click)="lugar(3)">3</div>
+          <div class="spot" id="4" (click)="lugar(4)">4</div>
+          <div class="spot" id="5" (click)="lugar(5)">5</div>
+        </div>
+        <div class="row">
+          <div class="spot" id="6" (click)="lugar(6)">6</div>
+          <div class="spot" id="7" (click)="lugar(7)">7</div>
+          <div class="spot" id="8" (click)="lugar(8)">8</div>
+          <div class="spot" id="9" (click)="lugar(9)">9</div>
+          <div class="spot" id="10" (click)="lugar(10)">10</div>
+        </div>
+        <div class="row">
+          <div class="spot" id="11" (click)="lugar(11)">11</div>
+          <div class="spot" id="12" (click)="lugar(12)">12</div>
+          <div class="spot" id="13" (click)="lugar(13)">13</div>
+          <div class="spot" id="14" (click)="lugar(14)">14</div>
+          <div class="spot" id="15" (click)="lugar(15)">15</div>
+        </div>
+        <div class="row">
+          <div class="spot" id="16" (click)="lugar(16)">16</div>
+          <div class="spot" id="17" (click)="lugar(17)">17</div>
+          <div class="spot" id="18" (click)="lugar(18)">18</div>
+          <div class="spot" id="19" (click)="lugar(19)">19</div>
+          <div class="spot" id="20" (click)="lugar(20)">20</div>
+        </div>
+          <div class="row">
+          <div class="spot" id="21" (click)="lugar(21)">21</div>
+          <div class="spot" id="22" (click)="lugar(22)">22</div>
+          <div class="spot" id="23" (click)="lugar(23)">23</div>
+          <div class="spot" id="24" (click)="lugar(24)">24</div>
+          <div class="spot" id="25" (click)="lugar(25)">25</div>
+          </div>
+      </div>
+      <button type="submit">Registrar</button>
+    </form>
+</div>

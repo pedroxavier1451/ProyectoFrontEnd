@@ -17,6 +17,7 @@ import { ListTicketComponent } from './pages/list-ticket/list-ticket.component';
 import { ListFacturaComponent } from './pages/list-factura/list-factura.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { GenTicketComponent } from './pages/gen-ticket/gen-ticket.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { GenTicketComponent } from './pages/gen-ticket/gen-ticket.component';
     MatSlideToggleModule,
     MatDatepickerModule,
     MatInputModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

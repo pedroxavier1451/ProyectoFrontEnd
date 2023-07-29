@@ -1,7 +1,7 @@
 export class Cliente{
 
-    apellido:String='';
-    cedula :String ='';
-    nombre:String ='';
-
+    apellido:string='';
+    cedula:string ='';
+    nombre:string ='';
+    correo:string='';
 }

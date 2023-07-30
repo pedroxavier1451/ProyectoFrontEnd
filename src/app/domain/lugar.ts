@@ -1,6 +1,6 @@
 export class Lugar{
 
-    estado:boolean=false;
+    estado:boolean=true;
     nroLugar:number=0;
     idLugar:number=0;
 }

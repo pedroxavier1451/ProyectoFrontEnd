@@ -1,6 +1,6 @@
 export class Vehiculo{
 
-    modelo:String='';
-    placa:String='';
+    modelo:string='';
+    placa:string='';
 
 }

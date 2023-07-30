@@ -13,7 +13,7 @@ export class LugarService {
 
   save(lugar: Lugar){
     console.log("Post");
-    return this.http.post<any>("http://localhost:8080/proyecto/rs/Vehiculo-Cliente/AgregarCliente/", lugar)
+    return this.http.post<any>("http://localhost:8080/proyecto/rs/Lugar", lugar)
   }
 
   getAll(){
@@ -25,6 +25,11 @@ export class LugarService {
   }
 
   update(lugar:Lugar){
-    return this.http.post<any>("http://localhost:8080/proyecto/rs/Vehiculo-Cliente/AgregarCliente/", lugar)
+    return this.http.post<any>("http://localhost:8080/proyecto/rs/Lugar", lugar)
   }
+
+  verificar(){
+    return this.http.get<any>("http://localhost:8080/proyecto/rs/Lugar/verificar")
+  }
+
 }

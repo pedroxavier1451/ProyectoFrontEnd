@@ -13,7 +13,7 @@ export class TicketService {
 
   save(ticket: Ticket){
     console.log("Post");
-    return this.http.post<any>("http://localhost:8080/proyecto/rs/Vehiculo-Cliente/AgregarCliente/", ticket)
+    return this.http.post<any>("http://localhost:8080/proyecto/rs/Ticket/AgregarTicket/", ticket)
   }
 
   getAll(){

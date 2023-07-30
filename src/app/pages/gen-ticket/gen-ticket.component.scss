@@ -142,3 +142,11 @@ body{
 button:hover {
     background-color: #0056b3;
 }
+
+.no-selectable {
+  user-select: none;
+}
+
+.no-selectable2 {
+  user-select: none;
+}

@@ -9,6 +9,8 @@ export class ClienteService {
 
   constructor(private http:HttpClient) { }
 
+  // codigo imcompleto
+
   save(cliente: Cliente){
     console.log("Post");
     return this.http.post<any>("http://localhost:8080/proyecto/rs/Vehiculo-Cliente/AgregarCliente/", cliente)
@@ -19,10 +21,10 @@ export class ClienteService {
   }
   
   delete(cliente: Cliente){
-    return this.http.delete("http://localhost:8080/demo/rs/clientes/delete/"+cliente.cedula)
+    return this.http.delete("http://localhost:8080/proyecto/rs/Vehiculo-Cliente/deleteCliente/"+cliente.cedula)
   }
 
   update(cliente:Cliente){
-    return this.http.post<any>("http://localhost:8080/demo/rs/clientes",cliente)
+    return this.http.post<any>("http://localhost:8080/proyecto/rs/Vehiculo-Cliente/AgregarCliente/", cliente)
   }
 }

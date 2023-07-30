@@ -1,3 +1,7 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .ticket {
     max-width: 815px;
     margin: 30px auto;
@@ -7,10 +11,7 @@
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
-  .form-group {
-    margin-bottom: 20px;
-    
-  }
+  
   label {
     display: block;
     font-weight: bold;
@@ -23,7 +24,7 @@
     align-items: center;
   }
   input[type="submit"] {
-    background-color: #4CAF50;
+    background-color: #7fca81;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -66,18 +67,19 @@
   .spot {
     width: 161px;
     height: 65px;
-    background-color: #4CAF50; /* Color de fondo del lugar de estacionamiento */
-    border: 1px solid #999; /* Borde del lugar de estacionamiento */
+    background-color: rgb(97, 210, 101); /* Color de fondo del lugar de estacionamiento */
+    border: 1px solid #b9b8b8; /* Borde del lugar de estacionamiento */
     cursor: pointer; /* Cambiar el cursor al pasar por encima de un lugar de estacionamiento */
     text-align: center;
     place-items: center;
     display: grid;
     font-size: 30px;
-    color:#dad5d5
+    color:#f1f1f1;
+    
   }
 
   .spot:hover {
-    background-color: #ea0c0c; /* Color de fondo al pasar por encima de un lugar de estacionamiento */
+    background-color: #f57a7a; /* Color de fondo al pasar por encima de un lugar de estacionamiento */
   }
 
   
@@ -85,12 +87,39 @@
     background-color: #ea0c0c;
   }
 
-  form {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+  // form {
+  //   display: flex;
+  //   align-items: center;
+  //   flex-wrap: wrap;
+  //   text-align: center;
+  // }
+.contenedor{
+  display: flex;
+  justify-content: space-between;
+  max-width: 600px;
+  margin: 0 auto;
+}
+  .form-group {
     text-align: center;
   }
+  
+  /* Estilos para los títulos */
+  .form-group h2 {
+    margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  }
+  
+  /* Estilos para las cajas de texto */
+  .form-group input {
+    width: 125px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+  }
+
+
 
   #lbl{
     text-align: left;

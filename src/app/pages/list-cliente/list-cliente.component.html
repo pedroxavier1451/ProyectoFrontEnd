@@ -22,6 +22,7 @@
                 <td>Apellido</td>
                 <td>Correo Electronico</td>
                 <td>GenerarTicket</td>
+                <td>Eliminar</td>
                 </tr>
             </thead>
             <tbody>
@@ -30,7 +31,8 @@
                     <td>{{cliente.nombre}}</td>
                     <td>{{cliente.apellido}}</td>
                     <td>{{cliente.correo}}</td>
-                    <td><a id = "generar" (click)="generar()">Generar</a></td>
+                    <td> <a id = "generar" (click)="enviarCliente(cliente)">Generar</a></td>
+                    <td id="Eliminar" (click)="eliminar(cliente)">Eliminar</td>
                 </tr>
             </tbody>
     </table>

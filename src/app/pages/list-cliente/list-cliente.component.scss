@@ -38,7 +38,9 @@ tbody tr:hover {
   display: inline-block;
   font-size: 16px;
   cursor: pointer;
+  border-radius: 4px;
 }
+
 .tituloTabla{
   padding: 8px; 
   border-bottom: 1px solid #ddd; 

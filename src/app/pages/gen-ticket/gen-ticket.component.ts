@@ -12,6 +12,7 @@ import { VehiculoService } from 'src/app/services/vehiculo.service';
 
 let cont:number = 0;
 let val:number;
+let lugarUsado: boolean = false;
 
 @Component({
   selector: 'app-gen-ticket',
@@ -25,14 +26,17 @@ export class GenTicketComponent implements OnInit{
   ticket:Ticket=new Ticket();
   vehiculo:Vehiculo = new Vehiculo();
   lugar:Lugar = new Lugar();
-  numeros: any;
+  // Propiedad que es un array de números enteros
+  private numeros: number[];
 
   constructor(private clienteService:ClienteService,
     private vehiculoService:VehiculoService,
     private ticketService:TicketService,
     private lugarService:LugarService,
     private router:Router){
-    
+
+      // Crear el array vacío en el constructor
+      this.numeros = [];
       let params=this.router.getCurrentNavigation()?.extras.queryParams;
       if(params){
         console.log(params)
@@ -44,7 +48,6 @@ export class GenTicketComponent implements OnInit{
 
       
   ngOnInit(): void {
-
     this.lugarService.verificar().subscribe(data => {
       console.log("Resultado WS SAVE", data);
       // Verificar que la variable sea una lista
@@ -55,12 +58,14 @@ export class GenTicketComponent implements OnInit{
           if(divSeleccionable){
             divSeleccionable.classList.toggle("selected");
           }
+          this.numeros.push(elemento);
         }
       } else {
         const divSeleccionable = document.getElementById(data);
           if(divSeleccionable){
             divSeleccionable.classList.toggle("selected");
           }
+          this.numeros.push(data);
       }
     });
 
@@ -68,20 +73,30 @@ export class GenTicketComponent implements OnInit{
   }
   
   verLugar(valor: any){
-    //alert(valor);
     const divSeleccionable = document.getElementById(valor);
     if (divSeleccionable) {
-      if(cont <= 0 || val == valor){
-        divSeleccionable.classList.toggle("selected");
-        cont ++;
-        if(val == valor){
-          cont = cont - 2;
+      for (let numUsado of this.numeros) {
+        if(numUsado == valor){
+          lugarUsado = true;
         }
-        val = valor;
       }
 
-      if(val != valor){
-        alert("Seleccione solo una opcion");
+      if(lugarUsado == false){
+        if(cont <= 0 || val == valor){
+          divSeleccionable.classList.toggle("selected");
+          cont ++;
+          if(val == valor){
+            cont = cont - 2;
+          }
+          val = valor;
+        }
+      
+        if(val != valor){
+          alert("Seleccione solo una opcion");
+        }
+      }else{
+          alert("Ese lugar ya esta ocupado");
+          lugarUsado = false;
       }
     }
   }

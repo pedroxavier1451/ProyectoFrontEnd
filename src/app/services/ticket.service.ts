@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 import { Ticket } from '../domain/ticket';
 import { tick } from '@angular/core/testing';
 import { Cliente } from '../domain/cliente';
+import { Lugar } from '../domain/lugar';
+import { Vehiculo } from '../domain/vehiculo';
 
 @Injectable({
   providedIn: 'root'
@@ -30,5 +32,9 @@ export class TicketService {
 
   getVehiculo(cliente:Cliente){
     return this.http.get(""+cliente.cedula);
+  }
+
+  getPlacaLugar(v:Vehiculo, l :Lugar ){
+    return this.http.get<any>("http://localhost:8080/proyecto/rs/Ticket/BuscarVehiculo-Lugar/"+v.placa+l.nroLugar)
   }
 }

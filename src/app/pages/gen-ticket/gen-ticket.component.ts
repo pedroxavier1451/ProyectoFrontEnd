@@ -108,6 +108,8 @@ export class GenTicketComponent implements OnInit{
     this.ngOnInit()} 
     );
 
+
+
     this.vehiculoService.save(this.vehiculo).subscribe(data => {
       console.log("Resultado WS SAVE", data);
     });
@@ -125,6 +127,6 @@ export class GenTicketComponent implements OnInit{
       this.router.navigate(['paginas/listTicket'])
     });
     this.ticket=new Ticket()
-  }
+   }
 
 }

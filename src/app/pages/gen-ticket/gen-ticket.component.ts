@@ -103,10 +103,6 @@ export class GenTicketComponent implements OnInit{
   registrar(cliente:Cliente){
     // para buscar el vehiculo por la cedula y si lo encuentra manda a generar el vehiculo
     // codigo imcompleto
-
-
-
-
     this.ticketService.getVehiculo(cliente).subscribe(
       ()=>{console.log("busca cliente")
     this.ngOnInit()} 
@@ -130,9 +126,19 @@ export class GenTicketComponent implements OnInit{
 
     this.ticketService.save(this.ticket).subscribe(data => {
       console.log("Resultado WS SAVE", data);
+      this.reloadPage();
       this.router.navigate(['paginas/listTicket'])
     });
     this.ticket=new Ticket()
    }
+
+   reloadPage(){
+    let currentUrl = this.router.url
+    this.router.navigateByUrl("/", {skipLocationChange: true}).then(
+      () =>{
+        this.router.navigate([currentUrl])
+      }
+    )
+  }
 
 }

@@ -57,6 +57,7 @@ body{
     grid-gap: px; /* Espacio entre los lugares de estacionamiento */
     justify-content: center;
     text-align: center;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
   }
   
   .row {
@@ -67,8 +68,8 @@ body{
   .spot {
     width: 161px;
     height: 65px;
-    background-color: rgb(97, 210, 101); /* Color de fondo del lugar de estacionamiento */
-    border: 1px solid #b9b8b8; /* Borde del lugar de estacionamiento */
+    background-color: rgb(54, 216, 59); /* Color de fondo del lugar de estacionamiento */
+    border: 2px solid rgb(107, 107, 107); /* Borde del lugar de estacionamiento */
     cursor: pointer; /* Cambiar el cursor al pasar por encima de un lugar de estacionamiento */
     text-align: center;
     place-items: center;
@@ -79,12 +80,12 @@ body{
   }
 
   .spot:hover {
-    background-color: #f57a7a; /* Color de fondo al pasar por encima de un lugar de estacionamiento */
+    background-color: #f65a5a; /* Color de fondo al pasar por encima de un lugar de estacionamiento */
   }
 
   
   .spot.selected{
-    background-color: #ea0c0c;
+    background-color: red;
   }
 
   // form {

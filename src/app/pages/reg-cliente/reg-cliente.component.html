@@ -4,23 +4,30 @@
         
         <!-- <label for="cedula">Cedula:</label>
         <input type="id" id="cedula" [(ngModel)]="cliente.cedula" name="cedula" required> -->
-        <mat-form-field appearance="outline">
+        <mat-form-field class="example-full-width">
             <mat-label>Cedula</mat-label>
-            <input matInput placeholder="Placeholder" [(ngModel)]="cliente.cedula">
+            <input matInput placeholder="" [(ngModel)]="cliente.cedula" name="cedula" required>
           </mat-form-field>
+        
+        <mat-form-field class="example-full-width">
+            <mat-label>Nombre:</mat-label>
+            <input matInput placeholder="" [(ngModel)]="cliente.nombre" name="nombre" required>
+        </mat-form-field>
 
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" [(ngModel)]="cliente.nombre" name="nombre" required>
+        <mat-form-field class="example-full-width">
+            <mat-label>Apellido:</mat-label>
+            <input matInput placeholder="" [(ngModel)]="cliente.apellido" name="apellido" required>
+        </mat-form-field>
 
-        <label for="apellido">Apellido:</label>
-        <input type="text" id="apellido" [(ngModel)]="cliente.apellido" name="apellido" required>
+        <mat-form-field class="example-full-width">
+            <mat-label>Correo electrónico:</mat-label>
+            <input matInput placeholder="" [(ngModel)]="cliente.correo" name="email">
+        </mat-form-field>
 
-
-        <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" [(ngModel)]="cliente.correo" name="email" required>
-
-        <label for="id">Placa:</label>
-        <input type="id" id="id" [(ngModel)]="vehiculo.placa" name="id" required>
+        <mat-form-field class="example-full-width">
+            <mat-label>Placa:</mat-label>
+            <input matInput placeholder="" [(ngModel)]="vehiculo.placa" name="id" required>
+        </mat-form-field>
 
         <button type="submit" (click)="guardar()">Registrar</button>
     </form>

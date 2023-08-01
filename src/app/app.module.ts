@@ -18,6 +18,7 @@ import { ListFacturaComponent } from './pages/list-factura/list-factura.componen
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { GenTicketComponent } from './pages/gen-ticket/gen-ticket.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FacturaComponent } from './pages/factura/factura.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { HttpClientModule } from '@angular/common/http';
     ListTicketComponent,
     ListFacturaComponent,
     ContactoComponent,
-    GenTicketComponent
+    GenTicketComponent,
+    FacturaComponent
   ],
   imports: [
     BrowserModule,

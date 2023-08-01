@@ -1,0 +1,46 @@
+<div class="factura">
+    <div class="factura-header">
+        <h1>Factura</h1>
+    </div>
+    <div class="factura-datos">
+
+        <div  id="right-text" class="spot"><strong>FACTURA# &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FECHA</strong></div> 
+
+        <p id="left-text">Calle vieja 12-30</p> 
+        <p id="left-text">Cuenca, 010105</p>
+
+        <p id="right-text">{{"numero_factura"}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ "fechaFormateada" }}</p>
+        <p id="fecha-actual"></p>
+
+        <p id="left-text">(07) 413-5250</p><br><br>
+
+        <div id="right-text" class="spot"><strong>FACTURAR A</strong></div>
+
+        <div class="spot"><strong>FACTURAR A</strong></div><br>
+
+        <p id="right-text">{{"identificacion_cliente"}}</p>
+
+        <p><strong>Nombre del Cliente:</strong> {{"nombre_cliente"}}</p>
+        <p><strong>Apellido del Cliente:</strong> {{"apellido_cliente"}}</p>
+        <p><strong>Correo del Cliente:</strong> {{"correo_cliente"}}</p>
+        
+        
+
+        
+    </div>
+    <table class="factura-table">
+        <thead>
+            <tr>
+                <th>Descripción del Producto</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{"descripcion_producto"}}</td>
+                <td>{{"precio_producto"}}</td>
+            </tr>
+            <!-- Puedes añadir más productos aquí si es necesario -->
+        </tbody>
+    </table>
+</div>

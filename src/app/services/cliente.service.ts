@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Cliente } from '../domain/cliente';
 
@@ -13,7 +13,8 @@ export class ClienteService {
 
   save(cliente: Cliente){
     console.log("Post");
-    return this.http.post<any>("http://localhost:8080/proyecto/rs/Vehiculo-Cliente/AgregarCliente/", cliente)
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    return this.http.post<any>("http://localhost:8080/proyecto/rs/Vehiculo-Cliente/AgregarCliente/", JSON.stringify(cliente), { headers })
   }
 
   getAll(){

@@ -19,6 +19,8 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
 import { GenTicketComponent } from './pages/gen-ticket/gen-ticket.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FacturaComponent } from './pages/factura/factura.component';
+import {MatButtonModule} from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { FacturaComponent } from './pages/factura/factura.component';
     MatInputModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

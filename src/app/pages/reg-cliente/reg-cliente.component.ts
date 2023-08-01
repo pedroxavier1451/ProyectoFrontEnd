@@ -40,9 +40,10 @@ export class RegClienteComponent {
       if(this.cliente.cedula.length==10){
         const regexSoloNumeros: RegExp = /^[0-9]+$/;
         if(regexSoloNumeros.test(this.cliente.cedula) == true){
+          this.cliente.vehiculo=this.vehiculo
           this.clientesService.save(this.cliente).subscribe(data => {
             console.log("Resultado WS SAVE", data);
-            
+            this.router.navigate(['paginas/listCliente'])
           });
           this.cliente=new Cliente()
           
@@ -53,13 +54,6 @@ export class RegClienteComponent {
       else{
         alert("Cedula invalida")
       }
-
-      this.vehiculoService.save(this.vehiculo).subscribe(data => {
-        console.log("Resultado WS SAVE", data);
-      });
       this.vehiculo=new Vehiculo()
-      
-      this.router.navigate(['paginas/listCliente'])
-
     }
 }

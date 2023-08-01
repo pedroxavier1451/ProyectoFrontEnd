@@ -14,6 +14,9 @@
         <label for="email">Correo electrónico:</label>
         <input type="email" id="email" [(ngModel)]="cliente.correo" name="email" required>
 
+        <label for="id">Placa:</label>
+        <input type="id" id="id" [(ngModel)]="vehiculo.placa" name="id" required>
+
         <button type="submit" (click)="guardar()">Registrar</button>
     </form>
 </div>

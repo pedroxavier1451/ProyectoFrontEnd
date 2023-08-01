@@ -113,7 +113,6 @@ export class GenTicketComponent implements OnInit{
     );
 
 
-
     this.vehiculoService.save(this.vehiculo).subscribe(data => {
       console.log("Resultado WS SAVE", data);
     });

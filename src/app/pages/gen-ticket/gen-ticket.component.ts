@@ -42,6 +42,7 @@ export class GenTicketComponent implements OnInit{
         console.log(params)
           this.cliente=new Cliente();
           this.cliente=params['cliente']
+          this.vehiculo=this.cliente.vehiculo
         }
 
       }
@@ -109,12 +110,14 @@ export class GenTicketComponent implements OnInit{
     );
 
 
-    this.vehiculoService.save(this.vehiculo).subscribe(data => {
-      console.log("Resultado WS SAVE", data);
-    });
-    this.vehiculo=new Vehiculo()
+    // this.vehiculoService.save(this.vehiculo).subscribe(data => {
+    //   console.log("Resultado WS SAVE", data);
+    // });
+    // this.vehiculo=new Vehiculo()
 
-    this.ticketService.getPlacaLugar(this.vehiculo,this.lugar)
+
+
+    // this.ticketService.getPlacaLugar(this.vehiculo,this.lugar)
 
     this.lugar.nroLugar = val;
     this.lugar.estado = false;
@@ -123,7 +126,9 @@ export class GenTicketComponent implements OnInit{
       console.log("Resultado WS SAVE", data);
     }); 
 
-
+    this.ticket.lugar=this.lugar;
+    this.ticket.vehiculo=this.vehiculo;
+    console.log(this.ticket)
     this.ticketService.save(this.ticket).subscribe(data => {
       console.log("Resultado WS SAVE", data);
       this.reloadPage();

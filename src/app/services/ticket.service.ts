@@ -35,6 +35,10 @@ export class TicketService {
   }
 
   getPlacaLugar(v:Vehiculo, l :Lugar ){
-    return this.http.get<any>("http://localhost:8080/proyecto/rs/Ticket/BuscarVehiculo-Lugar/"+v.placa+l.nroLugar)
+    return this.http.get<any>("http://localhost:8080/proyecto/rs/Ticket/BuscarVehiculo-Lugar/"+v.placa+"/"+l.nroLugar)
+  }
+
+  getPlaca(c:Cliente){
+    return this.http.get<any>(""+c.cedula)
   }
 }

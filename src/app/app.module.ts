@@ -18,6 +18,8 @@ import { ListFacturaComponent } from './pages/list-factura/list-factura.componen
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { GenTicketComponent } from './pages/gen-ticket/gen-ticket.component';
 import { HttpClientModule } from '@angular/common/http';
+import {MatButtonModule} from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatInputModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

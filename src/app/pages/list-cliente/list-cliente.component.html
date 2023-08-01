@@ -13,28 +13,34 @@
 </script>
 
 <div id="elemento">
-<ul>
-    <table>
-        <thead class="tituloTabla" *ngIf="listadoContactosWS.length !=0">
-            <tr>
-                <td>Cedula</td>
-                <td>Nombre</td>
-                <td>Apellido</td>
-                <td>Correo Electronico</td>
-                <td>GenerarTicket</td>
-                <td>Eliminar</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let cliente of listadoContactosWS|async">
-                    <td class ="cedula">{{cliente.cedula}}</td>
-                    <td>{{cliente.nombre}}</td>
-                    <td>{{cliente.apellido}}</td>
-                    <td>{{cliente.correo}}</td>
-                    <td> <a id = "generar" (click)="enviarCliente(cliente)">Generar</a></td>
-                    <td id="Eliminar" (click)="eliminar(cliente)">Eliminar</td>
-                </tr>
-            </tbody>
-    </table>
-</ul>
+    <ul>
+        <table>
+            <thead class="tituloTabla" *ngIf="listadoContactosWS.length !=0">
+                <tr>
+                    <td>Cedula</td>
+                    <td>Nombre</td>
+                    <td>Apellido</td>
+                    <td>Correo Electronico</td>
+                    <td>GenerarTicket</td>
+                    <td>Eliminar</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let cliente of listadoContactosWS|async">
+                        <td class ="cedula">{{cliente.cedula}}</td>
+                        <td>{{cliente.nombre}}</td>
+                        <td>{{cliente.apellido}}</td>
+                        <td>{{cliente.correo}}</td>
+                        <td> <a id = "generar" (click)="enviarCliente(cliente)">Generar</a></td>
+                        <!-- <td id="Eliminar" (click)="eliminar(cliente)"  >Eliminar</td> -->
+                        <div class="example-button-container ">
+                        <td> <a> <button mat-fab color="warn" aria-label="Example icon button with a delete icon" (click)="eliminar(cliente)" > 
+                            <mat-icon>delete</mat-icon>
+                        </button> </a></td>
+                        </div>
+                    </tr>
+                </tbody>
+        </table>
+    </ul>
 </div>
+

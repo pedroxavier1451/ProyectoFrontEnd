@@ -17,7 +17,7 @@ export class ListClienteComponent implements OnInit{
     private personaService: ClienteService,
     private router: Router){
 
-      this.listadoContactosWS=personaService.getAll()
+      this.listadoContactosWS=this.clienteService.getAll()
   }
 
   ngOnInit():void{

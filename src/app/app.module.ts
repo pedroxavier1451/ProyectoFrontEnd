@@ -24,6 +24,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { PagessoporteComponent } from './pages/pagessoporte/pagessoporte.component';
 import { ContactenosComponent } from './pages/contactenos/contactenos.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { InicioComponent } from './pages/inicio/inicio.component';
     BrowserAnimationsModule,
     HttpClientModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

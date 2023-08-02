@@ -19,7 +19,7 @@ export class TicketService {
   }
 
   getAll(){
-    return this.http.get<any>("http://localhost:8080/proyecto/rs/Lugar/lugarLista")
+    return this.http.get<any>("http://localhost:8080/proyecto/rs/Ticket/ticketLista")
   }
   
   delete(ticket: Ticket){

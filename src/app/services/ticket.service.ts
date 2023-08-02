@@ -27,18 +27,18 @@ export class TicketService {
   }
 
   update(ticket:Ticket){
-    return this.http.post<any>("http://localhost:8080/proyecto/rs/Vehiculo-Cliente/AgregarCliente/", ticket)
+    return this.http.post<any>("http://localhost:8080/proyecto/rs/Ticket/AgregarTicket/", ticket)
   }
 
-  getVehiculo(cliente:Cliente){
-    return this.http.get(""+cliente.cedula);
+  getTicketId(id:number){
+    return this.http.get<any>("http://localhost:8080/proyecto/rs/Ticket/buscarTicket/"+id)
   }
 
-  getPlacaLugar(v:Vehiculo, l :Lugar ){
-    return this.http.get<any>("http://localhost:8080/proyecto/rs/Ticket/BuscarVehiculo-Lugar/"+v.placa+"/"+l.nroLugar)
-  }
+  // getPlacaLugar(v:Vehiculo, l :Lugar ){
+  //   return this.http.get<any>("http://localhost:8080/proyecto/rs/Ticket/BuscarVehiculo-Lugar/"+v.placa+"/"+l.nroLugar)
+  // }
 
-  getPlaca(c:Cliente){
-    return this.http.get<any>(""+c.cedula)
-  }
+  // getPlaca(c:Cliente){
+  //   return this.http.get<any>(""+c.cedula)
+  // }
 }

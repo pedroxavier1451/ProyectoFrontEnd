@@ -7,7 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./list-factura.component.scss']
 })
 export class ListFacturaComponent {
-
+  listadoFacturasWS: any;
+  displayedColumns: string[] = ['fecha', 'total', 'ticket', 'correo', 'generar', 'eliminar'];
 
 
 }

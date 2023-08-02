@@ -100,7 +100,8 @@ export class ListTicketComponent {
     
     this.factura.fecha = ticket.horaSalida
     this.factura.total = ticket.precio 
-    this.factura.ticket=this.ticket
+    
+    // codigo mal hecho this.factura.ticket = ticket
     this.facturaService.save(this.factura).subscribe(data => {
       console.log("Resultado WS SAVE", data);
       this.router.navigate(['paginas/listFactura'])

@@ -10,18 +10,19 @@ import { Cliente } from 'src/app/domain/cliente';
   styleUrls: ['./list-cliente.component.scss']
 })
 export class ListClienteComponent implements OnInit{
-  listadoContactosWS: any;
+  listadoClientesWS: any;
+  displayedColumns: string[] = ['cedula', 'nombre', 'apellido', 'correo', 'generar', 'eliminar'];
   cliente: Cliente =new Cliente();
 
   constructor(private clienteService:ClienteService,
     private personaService: ClienteService,
     private router: Router){
 
-      this.listadoContactosWS=this.clienteService.getAll()
+      this.listadoClientesWS=this.clienteService.getAll()
   }
 
   ngOnInit():void{
-    this.listadoContactosWS=this.clienteService.getAll();
+    this.listadoClientesWS=this.clienteService.getAll();
   }
 
   generar(cliente:Cliente){

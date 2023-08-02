@@ -19,7 +19,7 @@ export class FacturaService {
     }
     
     delete(factura: Factura){
-      // return this.http.delete("http://localhost:8080/proyecto/rs/Vehiculo-Cliente/deleteCliente/"+ticket.precio) esta se agregar el id en el domain e incluir aqui
+      return this.http.delete("http://localhost:8080/proyecto/rs/Factura/deleteFactura/"+factura.idFactura) 
     }
   
     update(factura: Factura){

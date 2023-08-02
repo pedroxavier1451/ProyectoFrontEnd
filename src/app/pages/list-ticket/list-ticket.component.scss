@@ -21,6 +21,7 @@ table {
 th, td {
   padding: 10px;
   text-align: left;
+  
 }
 
 th {
@@ -28,6 +29,7 @@ th {
   color: #fff;
   font-weight: bold;
 }
+
 
 tbody tr:nth-child(odd) {
   background-color: #f2f2f2de;
@@ -53,4 +55,30 @@ td:first-child {
   
 h1 {
 text-align: center;
+}
+/* Estilos base para el botón */
+.button-generar-factura {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #ececec;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Cambio de color al pasar el cursor sobre el botón */
+.button-generar-factura:hover {
+  background-color: #45a049;
+}
+
+/* Cambio de color al presionar el botón */
+.button-generar-factura:active {
+  background-color: #5eb661;
 }

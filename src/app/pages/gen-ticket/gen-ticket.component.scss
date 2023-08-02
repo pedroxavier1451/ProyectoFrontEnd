@@ -114,12 +114,29 @@ body{
   /* Estilos para las cajas de texto */
   .form-group input {
     width: 125px;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-top: 5px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
   }
 
+  .muestraFecha {
+    text-align: center;
+  }
+  
+  /* Estilos para los títulos */
+  .muestraFecha h2 {
+    margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  }
+  .muestraFecha input{
+    width: 190px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+  }
 
 
   #lbl{

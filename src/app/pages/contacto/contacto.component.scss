@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    //padding: 20px; /* Agregamos un espacio para que los elementos no estén pegados al borde */
+  }
+  .form-container,
+  .image-container {
+  flex: 1; /* Ambos contenedores tomarán el mismo espacio disponible en el contenedor principal */
+}
+  
+  .form-container {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgb(236, 236, 120);
+    text-align: center;
+    height: 100%;
+  }
+  
+  .form-container h2 {
+    margin-bottom: 20px;
+    padding-top: 120px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+/* Estilos como se mostraron en la respuesta anterior */
+
+.image-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white; /* Fondo blanco */
+  background-image: 
+    linear-gradient(45deg, rgba(0, 0, 0, 0.05) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 75%, transparent 75%, transparent), 
+    linear-gradient(135deg, rgba(0, 0, 0, 0.05) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 75%, transparent 75%, transparent); /* Líneas onduladas */
+  background-size: 2000px 2000px; /* Tamaño de las líneas */
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas con igual espacio entre ellas */
+  grid-gap: 10px; /* Espacio entre las imágenes */
+}
+
+.image-grid img {
+  width: 120px; /* Tamaño deseado de los iconos */
+  height: 120px; /* Tamaño deseado de los iconos */
+  object-fit: cover; /* Ajusta el contenido de la imagen sin distorsionarla */
+}
+
+
+  

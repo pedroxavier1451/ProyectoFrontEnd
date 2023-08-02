@@ -1,15 +1,22 @@
 <h1>Tickets</h1>
 
 <div id="elemento">
-<ul>
-    <table>
-        <tr>
-        <th>Placa</th>
-        <th>Lugar</th>
-        <th>Fecha Entrada</th>
-        <th>Fecha Salida</th>
-        <th>Generar Factura</th>
-        </tr>
-    </table>
-</ul>
+    <ul>
+        <table>
+            <tr>
+                <th>ID Ticket</th>
+                <th>Fecha Facturacion</th>
+                <th>Visualizacion</th>
+                <th>Marcar Salida</th>
+                <th>Generar Factura</th>
+            </tr>
+            <tbody>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="logout"><a><mat-icon>logout</mat-icon></a></td>
+                <td><a> <button class="button-generar-factura" (click)="generarFactura()">Generar Factura</button></a></td>
+            </tbody>
+        </table>
+    </ul>
 </div>

@@ -21,6 +21,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { FacturaComponent } from './pages/factura/factura.component';
 import {MatButtonModule} from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { PagessoporteComponent } from './pages/pagessoporte/pagessoporte.component';
+import { ContactenosComponent } from './pages/contactenos/contactenos.component';
+import { InicioComponent } from './pages/inicio/inicio.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { MatIconModule } from '@angular/material/icon';
     ListFacturaComponent,
     ContactoComponent,
     GenTicketComponent,
-    FacturaComponent
+    FacturaComponent,
+    PagessoporteComponent,
+    ContactenosComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,

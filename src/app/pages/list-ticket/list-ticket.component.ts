@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list-ticket',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class ListTicketComponent {
 
+  constructor(private router: Router)
+  {
+
+  }
+
+  public generarFactura(){
+    this.router.navigate(['paginas/factura'])
+  }
 }

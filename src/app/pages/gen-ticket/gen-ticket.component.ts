@@ -21,7 +21,7 @@ let lugarUsado: boolean = false;
 })
 
 export class GenTicketComponent implements OnInit{
-
+  fecha:string="";
   cliente:Cliente=new Cliente();
   ticket:Ticket=new Ticket();
   vehiculo:Vehiculo = new Vehiculo();
@@ -34,8 +34,8 @@ export class GenTicketComponent implements OnInit{
     private ticketService:TicketService,
     private lugarService:LugarService,
     private router:Router){
+      this.ticket.horaIngreso=this.setCurrentDateTime();
 
-      // Crear el array vacío en el constructor
       this.numeros = [];
       let params=this.router.getCurrentNavigation()?.extras.queryParams;
       if(params){
@@ -44,10 +44,8 @@ export class GenTicketComponent implements OnInit{
           this.cliente=params['cliente']
           this.vehiculo=this.cliente.vehiculo
         }
-
       }
 
-      
   ngOnInit(): void {
     this.lugarService.verificar().subscribe(data => {
       console.log("Resultado WS SAVE", data);
@@ -69,8 +67,13 @@ export class GenTicketComponent implements OnInit{
           this.numeros.push(data);
       }
     });
-
-    
+  }
+  setCurrentDateTime() {
+    const now = new Date();
+    const offset = now.getTimezoneOffset();
+    now.setMinutes(now.getMinutes() - offset);
+    this.fecha = now.toISOString().slice(0, 16); // Formato YYYY-MM-DDTHH:mm
+    return this.ticket.horaIngreso=now;
   }
   
   verLugar(valor: any){
@@ -102,23 +105,6 @@ export class GenTicketComponent implements OnInit{
     }
   }
   registrar(cliente:Cliente){
-    // para buscar el vehiculo por la cedula y si lo encuentra manda a generar el vehiculo
-    // codigo imcompleto
-    this.ticketService.getVehiculo(cliente).subscribe(
-      ()=>{console.log("busca cliente")
-    this.ngOnInit()} 
-    );
-
-
-    // this.vehiculoService.save(this.vehiculo).subscribe(data => {
-    //   console.log("Resultado WS SAVE", data);
-    // });
-    // this.vehiculo=new Vehiculo()
-
-
-
-    // this.ticketService.getPlacaLugar(this.vehiculo,this.lugar)
-
     this.lugar.nroLugar = val;
     this.lugar.estado = false;
 

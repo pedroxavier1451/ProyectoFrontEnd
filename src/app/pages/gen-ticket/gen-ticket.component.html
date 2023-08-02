@@ -1,14 +1,14 @@
 <div class="ticket">
     <h2>Generar Ticket</h2>
     <div class="contenedor">
-      <div class="form-group">
+      <div class="muestraFecha">
         <label for="fecha_entrada" id="lbl">Fecha de Entrada:</label>
-        <input type="datetime-local" id="fecha_entrada" [(ngModel)]="ticket.horaIngreso" required>
+        <input type="datetime-local" id="fecha_entrada" [(ngModel)]="fecha" required >
       </div>
-      <div class="form-group">
+      <!-- <div class="form-group">
         <label for="fecha_salida" id="lbl">Fecha de Salida:</label>
         <input type="datetime-local" id="fecha_salida" [(ngModel)]="ticket.horaSalida" required>
-      </div>
+      </div> -->
       <div class="form-group">
         <label for="placa" id="lbl">Placa:</label>
         <input type="text" id="placa" [(ngModel)]="cliente.vehiculo.placa" required disabled="true">

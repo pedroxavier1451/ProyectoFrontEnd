@@ -31,3 +31,15 @@ body {
     margin: 0;
   }
   
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas con igual espacio entre ellas */
+    grid-gap: 10px; /* Espacio entre las imágenes */
+    margin-top: 20px;
+  }
+  
+  .image-grid img {
+    width: 85%; /* Las imágenes ocuparán todo el ancho disponible en la cuadrícula */
+    height: auto; /* Ajusta la altura de manera proporcional */
+  }
+  

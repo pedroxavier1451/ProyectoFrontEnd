@@ -1,22 +1,33 @@
 <h1>Tickets</h1>
 
-<div id="elemento">
-    <ul>
-        <table>
-            <tr>
-                <th>ID Ticket</th>
-                <th>Fecha Facturacion</th>
-                <th>Visualizacion</th>
-                <th>Marcar Salida</th>
-                <th>Generar Factura</th>
-            </tr>
-            <tbody>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td class="logout"><a><mat-icon>logout</mat-icon></a></td>
-                <td><a> <button class="button-generar-factura" (click)="generarFactura()">Generar Factura</button></a></td>
-            </tbody>
-        </table>
-    </ul>
-</div>
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="horaIngreso">
+      <th mat-header-cell *matHeaderCellDef> Hora de Ingreso </th>
+      <td mat-cell *matCellDef="let element"> {{ticket.horaIngreso}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="placa">
+      <th mat-header-cell *matHeaderCellDef> Placa </th>
+      <td mat-cell *matCellDef="let element">  </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="lugar">
+      <th mat-header-cell *matHeaderCellDef> Lugar </th>
+      <td mat-cell *matCellDef="let element"> {{ticket.lugar}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="marcar">
+      <th mat-header-cell *matHeaderCellDef> Marcar Salida </th>
+      <td mat-cell *matCellDef="let element"> salida </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+

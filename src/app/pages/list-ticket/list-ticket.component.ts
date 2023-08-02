@@ -56,6 +56,7 @@ export class ListTicketComponent {
   // }
 
   public marcar(ticket: Ticket) {
+    alert("Vehiculo: "+ticket.vehiculo.placa+" Esta Salido")
     this.lugar=ticket.lugar;
     this.lugar.estado=true;
     this.lugarService.update(this.lugar).subscribe(data => {

@@ -100,7 +100,10 @@ export class ListTicketComponent {
     
     this.factura.fecha = ticket.horaSalida
     this.factura.total = ticket.precio 
+    this.factura.ticket = ticket
+
     
+
     // codigo mal hecho this.factura.ticket = ticket
     this.facturaService.save(this.factura).subscribe(data => {
       console.log("Resultado WS SAVE", data);
@@ -108,6 +111,7 @@ export class ListTicketComponent {
     });
     this.factura=new Factura()
     
+    console.log(this.factura.ticket.idTicket)
   }
 
   public calcularTiempoTranscurrido(fechaInicial: Date, fechaFinal: Date): { dias: number, horas: number, minutos: number } {

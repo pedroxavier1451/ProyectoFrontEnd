@@ -10,7 +10,7 @@ import { FacturaService } from 'src/app/services/factura.service';
 })
 export class ListFacturaComponent {
   listadoFacturasWS: any;
-  displayedColumns: string[] = ['codigo', 'fecha', 'total', 'ticket', 'generar', 'eliminar'];
+  displayedColumns: string[] = ['codigo', 'fechaIngreso', 'fechaSalida', 'placa', 'nroLugar', 'total', 'eliminar'];
   factura: Factura = new Factura();
 
   constructor(private facturaService:FacturaService,

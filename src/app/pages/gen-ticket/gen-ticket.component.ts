@@ -47,6 +47,7 @@ export class GenTicketComponent implements OnInit{
       }
 
   ngOnInit(): void {
+
     this.lugarService.verificar().subscribe(data => {
       console.log("Resultado WS SAVE", data);
       // Verificar que la variable sea una lista

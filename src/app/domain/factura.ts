@@ -6,6 +6,6 @@ export class Factura{
     codigo:string='';
     fecha:Date | undefined;
     total: number=0.0;
-    ticket!:Ticket;
+    ticket:Ticket = new Ticket();
 
 }

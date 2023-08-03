@@ -7,25 +7,30 @@
       <td mat-cell *matCellDef="let factura"> {{factura.codigo}} </td>
     </ng-container>
 
-    <ng-container matColumnDef="fecha">
-      <th mat-header-cell *matHeaderCellDef> Fecha </th>
-      <td mat-cell *matCellDef="let factura"> {{factura.fecha}} </td>
+    <ng-container matColumnDef="fechaIngreso">
+      <th mat-header-cell *matHeaderCellDef> Fecha de Ingreso</th>
+      <td mat-cell *matCellDef="let factura"> {{factura.ticket.horaIngreso}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="fechaSalida">
+      <th mat-header-cell *matHeaderCellDef> Fecha de Salida</th>
+      <td mat-cell *matCellDef="let factura"> {{factura.ticket.horaSalida}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="placa">
+      <th mat-header-cell *matHeaderCellDef> Placa </th>
+      <td mat-cell *matCellDef="let factura"> {{factura.ticket.vehiculo.placa}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="nroLugar">
+      <th mat-header-cell *matHeaderCellDef> Nro de lugar </th>
+      <td mat-cell *matCellDef="let factura"> {{factura.ticket.lugar.nroLugar}} </td>
     </ng-container>
 
     <ng-container matColumnDef="total">
       <th mat-header-cell *matHeaderCellDef> Total </th>
       <td mat-cell *matCellDef="let factura"> {{factura.total}} </td>
     </ng-container>
-
-    <ng-container matColumnDef="ticket">
-      <th mat-header-cell *matHeaderCellDef> Ticket </th>
-      <td mat-cell *matCellDef="let factura">  </td>
-    </ng-container>
-
-    <ng-container matColumnDef="generar">
-        <th mat-header-cell *matHeaderCellDef> Generar Factura </th>
-        <td mat-cell *matCellDef="let factura" (click)="generarFactura()"> Generar </td>
-      </ng-container>
 
     <ng-container matColumnDef="eliminar">
         <th mat-header-cell *matHeaderCellDef> Eliminar </th>

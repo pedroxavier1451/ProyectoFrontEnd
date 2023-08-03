@@ -3,7 +3,7 @@ import { Vehiculo } from "./vehiculo";
 
 export class Ticket{
 
-    idTicket!:number
+    idTicket?:number;
     horaIngreso:Date | undefined;
     horaSalida:Date | undefined;
     precio:number=0.0;

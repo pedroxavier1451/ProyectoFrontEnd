@@ -22,7 +22,7 @@ export class ClienteService {
   }
   
   delete(cliente: Cliente){
-    return this.http.delete("http://localhost:8080/proyecto/rs/Vehiculo-Cliente/deleteCliente/"+cliente.cedula)
+    return this.http.delete<any>("http://localhost:8080/proyecto/rs/Vehiculo-Cliente/deleteCliente/"+cliente.cedula)
   }
 
   update(cliente:Cliente){

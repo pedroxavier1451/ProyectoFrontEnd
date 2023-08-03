@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationExtras,Router } from '@angular/router';
+import { NavigationEnd, NavigationExtras,Router } from '@angular/router';
 import { Cliente } from 'src/app/domain/cliente';
 import { Lugar } from 'src/app/domain/lugar';
 import { Ticket } from 'src/app/domain/ticket';
@@ -34,6 +34,8 @@ export class GenTicketComponent implements OnInit{
     private ticketService:TicketService,
     private lugarService:LugarService,
     private router:Router){
+
+      
       this.ticket.horaIngreso=this.setCurrentDateTime();
 
       this.numeros = [];
@@ -44,9 +46,18 @@ export class GenTicketComponent implements OnInit{
           this.cliente=params['cliente']
           this.vehiculo=this.cliente.vehiculo
         }
+
+        
       }
 
   ngOnInit(): void {
+    
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        // Recargar la página cuando se navega a esta componente
+        location.reload();
+      }
+    });
 
     this.lugarService.verificar().subscribe(data => {
       console.log("Resultado WS SAVE", data);
@@ -118,19 +129,15 @@ export class GenTicketComponent implements OnInit{
     console.log(this.ticket)
     this.ticketService.save(this.ticket).subscribe(data => {
       console.log("Resultado WS SAVE", data);
-      this.reloadPage();
+      
       this.router.navigate(['paginas/listTicket'])
+      
     });
     this.ticket=new Ticket()
    }
 
-   reloadPage(){
-    let currentUrl = this.router.url
-    this.router.navigateByUrl("/", {skipLocationChange: true}).then(
-      () =>{
-        this.router.navigate([currentUrl])
-      }
-    )
+   public recargarPagina() {
+    window.location.reload();
   }
 
 }

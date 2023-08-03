@@ -1,22 +1,37 @@
 <h1>Facturas</h1>
 
-<div id="elemento">
-<ul>
-    <table>
-        <tr>
-            <th>Nro Factura</th>
-            <th>ID Ticket</th>
-            <th>Fecha Facturacion</th>
-            <th>Visualizacion</th>
-        
-        </tr>
-        <tbody>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            
-        </tbody>
-    </table>
-</ul>
-</div>
+<table mat-table [dataSource]="listadoFacturasWS" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="codigo">
+      <th mat-header-cell *matHeaderCellDef> Nro Factura </th>
+      <td mat-cell *matCellDef="let factura"> {{factura.codigo}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="fecha">
+      <th mat-header-cell *matHeaderCellDef> Fecha </th>
+      <td mat-cell *matCellDef="let factura"> {{factura.fecha}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="total">
+      <th mat-header-cell *matHeaderCellDef> Total </th>
+      <td mat-cell *matCellDef="let factura"> {{factura.total}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="ticket">
+      <th mat-header-cell *matHeaderCellDef> Ticket </th>
+      <td mat-cell *matCellDef="let factura">  </td>
+    </ng-container>
+
+    <ng-container matColumnDef="generar">
+        <th mat-header-cell *matHeaderCellDef> Generar Factura </th>
+        <td mat-cell *matCellDef="let factura" (click)="generarFactura()"> Generar </td>
+      </ng-container>
+
+    <ng-container matColumnDef="eliminar">
+        <th mat-header-cell *matHeaderCellDef> Eliminar </th>
+        <td mat-cell *matCellDef="let factura"> <mat-icon (click)="eliminar(factura)">delete</mat-icon> </td>
+      </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

@@ -1,9 +1,11 @@
+import { Ticket } from "./ticket";
+
 export class Factura{
 
-
-    codigo:number=0;
+    idFactura: number=0;
+    codigo:string='';
     fecha:Date | undefined;
     total: number=0.0;
-    
+    ticket!:Ticket;
 
 }

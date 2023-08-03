@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 import { ClienteService } from 'src/app/services/cliente.service';
-import { ContactoComponent } from '../contacto/contacto.component';
 import { Cliente } from 'src/app/domain/cliente';
 
 @Component({

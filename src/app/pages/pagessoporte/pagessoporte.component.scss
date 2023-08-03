@@ -1,48 +1,70 @@
 /* Estilos generales */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f7f7f7;
-    color: #333;
-  }
-  
-  header, main, footer {
-    margin: 20px;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Estilos de encabezado */
-  header h1 {
-    margin: 0;
-    color: #333;
-  }
-  
-  /* Estilos de secciones */
-  section {
-    margin-bottom: 30px;
-  }
-  
-  /* Estilos de enlaces de secciones */
-  section h2 {
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  /* Estilos de pie de página */
-  footer {
-    text-align: center;
-    color: #888;
-  }
-  
-  footer a {
-    color: #ff6600;
-  }
-  
-  footer a:hover {
-    text-decoration: underline;
-  }
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+header, main {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de encabezado */
+header h1 {
+  margin: 0;
+  color: #333;
+  font-size: 28px;
+  text-align: center;
+}
+
+/* Estilos de secciones */
+section {
+  margin-bottom: 40px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f98f;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de enlaces de secciones */
+section h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+section p {
+  line-height: 1.6;
+}
+
+/* Estilos de listas */
+ol, ul {
+  padding-left: 20px;
+}
+
+/* Estilos para enumeración */
+ol li {
+  list-style-type: decimal;
+}
+
+/* Estilos para viñetas */
+ul li {
+  list-style-type: disc;
+}
+
+/* Estilos para enlaces */
+a {
+  color: #ff6600;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
   

@@ -1,35 +1,29 @@
 /* Estilos para la cabecera */
 .cabecera {
-    background-color: #f0f0f0;
-    padding: 1px;
-    text-align: center;
-  }
-  
-  /* Estilos para el menú */
-  .menu {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-  }
-  
-  /* Estilos para el contenido */
-  .cuerpo {
-    
-    height: 10px;
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
- 
-    
-  }
-  
-  /* Estilos para el pie de página */
-  .pie {
-    top: 5%;
-    clear: both;
-    text-align: center;
-    padding: 5px;
-    background-color: #555;
-    color: #fff;
-  }
-  
+  background-color: #f0f0f0;
+  padding: 1px;
+  text-align: center;
+}
+
+/* Estilos para el menú */
+.menu {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+/* Estilos para el contenido */
+.cuerpo {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Asegura que el contenido ocupe al menos el alto total de la ventana */
+}
+
+/* Estilos para el pie de página */
+.pie {
+  text-align: center;
+  padding: 10px;
+  background-color: #555;
+  color: #fff;
+  margin-top: auto; /* Empuja el pie de página hacia abajo */
+}

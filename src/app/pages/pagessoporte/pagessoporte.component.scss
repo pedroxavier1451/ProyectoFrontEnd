@@ -1,0 +1,48 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+  }
+  
+  header, main, footer {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilos de encabezado */
+  header h1 {
+    margin: 0;
+    color: #333;
+  }
+  
+  /* Estilos de secciones */
+  section {
+    margin-bottom: 30px;
+  }
+  
+  /* Estilos de enlaces de secciones */
+  section h2 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos de pie de página */
+  footer {
+    text-align: center;
+    color: #888;
+  }
+  
+  footer a {
+    color: #ff6600;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  

@@ -57,16 +57,16 @@ export class ListTicketComponent {
 
   public marcar(ticket: Ticket) {
     alert("Vehiculo: "+ticket.vehiculo.placa+" Esta Salido")
-    this.lugar=ticket.lugar;
-    this.lugar.estado=true;
-    this.lugarService.update(this.lugar).subscribe(data => {
-      console.log("Resultado WS SAVE", data);
-    }); 
     ticket.horaSalida = this.setCurrentDateTime();
     this.ticketService.update(ticket).subscribe(() => {
       console.log("Ticket actualizado:", ticket);
       this.router.navigate(['paginas/factura'])
     });
+    this.lugar=ticket.lugar;
+    this.lugar.estado=true;
+    this.lugarService.update(this.lugar).subscribe(data => {
+      console.log("Resultado WS SAVE", data);
+    }); 
   }
   
 }

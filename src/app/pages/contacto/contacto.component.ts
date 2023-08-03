@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class ContactoComponent {
 
+  mensaje(){
+    alert("Mensaje Enviado")
+  }
+
 }
